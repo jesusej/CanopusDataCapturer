@@ -1,14 +1,20 @@
+import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
+
 import Home from "./Routes/Home";
+import LoadFiles from "./Routes/LoadFiles";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <h1>Canopus Data Capturer</h1>
-        <h2>Prueba de arquitectura</h2>
       </header>
       <main>
-        <Home />
+        <Router>
+          <Routes>
+            <Route path="/" element={<LoadFiles />} />
+          </Routes>
+        </Router>
       </main>
     </div>
   );
