@@ -10,16 +10,16 @@ function GetFiles() {
   const fileLoader = () => {
     const formData = new FormData();
 
-    formData.append("file", file, file.name);
-    formData.append("file2", file2, file2.name);
+    formData.getAll("file", file, file.name);
+    formData.getAll("file2", file2, file2.name);
 
     axios.post('http://localhost:3001/xlsx/uploadXlsx', formData).then((res) => {
       if(res.status === 201){
-        setAlert("Los archivos se han subido y guardado exitosamente");
+        setAlert("Los archivos se han cargado exitosamente");
       }
       console.log(res);
     }).catch(() => {
-      setAlert("Sucedió un problema al subir los archivos. Favor de revisar de nuevo sus archivos y de volver a intentarlo");
+      setAlert("Sucedió un problema al cargar los archivos. Favor de revisar de nuevo su conexion");
     });
   }
 
@@ -27,7 +27,7 @@ function GetFiles() {
     <div>
       { alert && <p>{alert}</p> }
     <br />
-      <button onClick={(() => fileLoader())}>Generar Balanza de Comprobacion</button> <br />
+      <button onClick={(() => GetFiles())}>Generar Balanza de Comprobacion</button> <br />
     </div>
   )
 }
