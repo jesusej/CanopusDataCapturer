@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 
 import Home from "./Routes/Home";
 import LoadFiles from "./Routes/LoadFiles";
+import GetFiles from "./Routes/GetFiles";
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
       <main>
         <Router>
           <Routes>
-            <Route path="/" element={<LoadFiles />} />
+            <Route path="/" element={<LoadFiles/>} />
+          </Routes>
+          <Routes>
+            <Route path="/" element={<GetFiles/>} />
           </Routes>
         </Router>
       </main>
