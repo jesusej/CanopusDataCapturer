@@ -15,9 +15,6 @@ function App() {
           <Routes>
             <Route path="/" element={<LoadFiles/>} />
           </Routes>
-          <Routes>
-            <Route path="/" element={<GetFiles/>} />
-          </Routes>
         </Router>
       </main>
     </div>

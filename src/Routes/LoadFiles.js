@@ -7,6 +7,8 @@ function LoadFiles() {
   
   const [alert, setAlert] = useState("");
 
+  const [result, setResult] = useState("");
+
   const fileLoader = () => {
     const formData = new FormData();
 
@@ -16,6 +18,8 @@ function LoadFiles() {
     axios.post('http://localhost:3001/xlsx/uploadXlsx', formData).then((res) => {
       if(res.status === 201){
         setAlert("Los archivos se han subido y guardado exitosamente");
+        console.log(res.data)
+        setResult(res.data)
       }
       console.log(res);
     }).catch(() => {
@@ -37,7 +41,9 @@ function LoadFiles() {
         setFile2(e.target.files[0]);
       })}/><br />
       <br />
-      <button onClick={(() => fileLoader())}>Subir archivos</button> <br />
+      <button onClick={(() => fileLoader())}>Subir archivos</button>
+      <br />
+      {result && <p>{result.nameEnterprise}</p>}
     </div>
   )
 }
