@@ -26,6 +26,7 @@ function GetFiles() {
   return (
     <div>
       { alert && <p>{alert}</p> }
+    <br />
       <button onClick={(() => fileLoader())}>Generar Balanza de Comprobacion</button> <br />
     </div>
   )
