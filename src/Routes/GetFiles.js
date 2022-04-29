@@ -3,7 +3,9 @@ import axios from 'axios';
 
 function GetFiles() {
   const [alert, setAlert] = useState("");
-
+  const [file, setFile] = useState(null);
+  const [file2, setFile2] = useState(null);
+  
   const filegetter = () => {
     const formData = new FormData();
 
