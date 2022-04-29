@@ -2,12 +2,9 @@ import React, {useState} from 'react'
 import axios from 'axios';
 
 function GetFiles() {
-  const [file, setFile] = useState(null);
-  const [file2, setFile2] = useState(null);
-  
   const [alert, setAlert] = useState("");
 
-  const fileLoader = () => {
+  const filegetter = () => {
     const formData = new FormData();
 
     formData.getAll("file", file, file.name);
@@ -27,7 +24,7 @@ function GetFiles() {
     <div>
       { alert && <p>{alert}</p> }
     <br />
-      <button onClick={(() => GetFiles())}>Generar Balanza de Comprobacion</button> <br />
+      <button onClick={(() => filegetter())}>Generar Balanza de Comprobacion</button> <br />
     </div>
   )
 }
