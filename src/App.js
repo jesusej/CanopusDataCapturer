@@ -7,8 +7,8 @@ import NavbarComp from "./Components/NavbarComp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App" style={{ backgroundColor: "#C1C2C3"}}>
+      <header className="App-header" >
         <NavbarComp/>
         <h1>Canopus Data Capturer</h1>
       </header>
