@@ -41,7 +41,11 @@ function LoadFiles() {
         setFile2(e.target.files[0]);
       })}/><br />
       <br />
-      <button onClick={(() => fileLoader())}>Subir archivos</button>
+      <button onClick={(() => fileLoader())}
+      variant="primary"
+      size="lg"
+      style={{ backgroundColor: "#AED6F1"}}
+      >Subir archivos</button>
       <br />
       {result && <p>{result.nameEnterprise}</p>}
     </div>
