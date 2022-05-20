@@ -26,7 +26,9 @@ function GetFiles() {
     <div>
       { alert && <p>{alert}</p> }
     <br />
-      <button onClick={(() => filegetter())}>Generar Balanza de Comprobacion</button> <br />
+          <button onClick={(() => filegetter())}>Generar Balanza de Comprobacion</button> <br />
+    <br />
+          <button onClick={(() => filegetter())}>Generar Balanze General</button> <br />
     </div>
   )
 }

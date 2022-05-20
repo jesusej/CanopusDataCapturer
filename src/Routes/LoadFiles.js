@@ -33,7 +33,11 @@ function LoadFiles() {
 
   const irBalanza = () => {
     navigate('/GetBalanceFiles');
-  }
+    }
+
+  const irBalance = () => {
+        navigate('/GetGeneralBalance');
+    }
 
   //asi se veria la pagina
   return (
@@ -55,6 +59,8 @@ function LoadFiles() {
       {result && <p>{result.nameEnterprise}</p>}
       
       <button onClick={(() => irBalanza())}>Generar Balanza</button>
+      <br />
+      <button onClick={(() => irBalance())}>Generar Balance General</button>
 
     </div>
   )
