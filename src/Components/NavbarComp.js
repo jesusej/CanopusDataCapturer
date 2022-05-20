@@ -14,10 +14,10 @@ export default class NavbarComp extends Component {
                         <Nav.Link href="#home">Carga de Cuentas</Nav.Link>
                         <Nav.Link href="#link1">Movimientos Auxiliares</Nav.Link>
                         <Nav.Link href="#link2">Estado de Resultados</Nav.Link>
-                        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                        {/*<NavDropdown title="Dropdown" id="basic-nav-dropdown">
                         <NavDropdown.Item href="#action/3.1">Manejo de Cuentas</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Manejo de Empresas</NavDropdown.Item>
-                        </NavDropdown>
+        </NavDropdown>*/}
                     </Nav>
                     </Navbar.Collapse>
                 </Navbar>
