@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import LoadFiles from "./Routes/LoadFiles";
+import GetBalanceFiles from "./Routes/GetBalanceFiles"; 
 
 function App() {
   return (
