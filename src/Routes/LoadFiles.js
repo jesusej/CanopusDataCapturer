@@ -7,15 +7,19 @@ function LoadFiles() {
   
   const [alert, setAlert] = useState("");
 
+  const [result, setResult] = useState("");
+
   const fileLoader = () => {
     const formData = new FormData();
 
     formData.append("file", file, file.name);
     formData.append("file2", file2, file2.name);
 
-    axios.post('http://localhost:3001/xlsx/uploadXlsx', formData).then((res) => {
+    axios.post('https://canopus-backend2.azurewebsites.net/xlsx/uploadXlsx', formData).then((res) => {
       if(res.status === 201){
         setAlert("Los archivos se han subido y guardado exitosamente");
+        console.log(res.data)
+        setResult(res.data)
       }
       console.log(res);
     }).catch(() => {
@@ -37,7 +41,13 @@ function LoadFiles() {
         setFile2(e.target.files[0]);
       })}/><br />
       <br />
-      <button onClick={(() => fileLoader())}>Subir archivos</button> <br />
+      <button onClick={(() => fileLoader())}
+      variant="primary"
+      size="lg"
+      style={{ backgroundColor: "#AED6F1", width: '175px', height: '50px', fontSize:23}}
+      >Subir archivos</button>
+      <br />
+      {result && <p>{result.nameEnterprise}</p>}
     </div>
   )
 }
