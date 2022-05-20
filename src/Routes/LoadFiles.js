@@ -44,7 +44,7 @@ function LoadFiles() {
       <button onClick={(() => fileLoader())}
       variant="primary"
       size="lg"
-      style={{ backgroundColor: "#AED6F1"}}
+      style={{ backgroundColor: "#AED6F1", width: '175px', height: '50px', fontSize:24}}
       >Subir archivos</button>
       <br />
       {result && <p>{result.nameEnterprise}</p>}
