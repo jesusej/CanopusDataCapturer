@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-import IncomeStatement from '../Components/IncomeStatement';
+import IncomeStatement from '../Components/IncomeStatement/IncomeStatement';
 
 function LoadIncomeStatement() {
   const [initialDate, setInitialDate] = useState("dfdgd");
@@ -15,7 +15,6 @@ function LoadIncomeStatement() {
 
       axios.get(url).then((res) => {
         setIncomeStatement(res.data);
-        console.log(incomeStatement);
       }).catch((e) => {
         console.log(e);
       })
