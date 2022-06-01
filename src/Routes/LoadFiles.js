@@ -1,7 +1,5 @@
 import React, {useState} from 'react'
 import axios from 'axios';
-import {Routes, Route, useNavigate} from 'react-router-dom';
-
 
 function LoadFiles() {
   const [file, setFile] = useState(null);
@@ -11,15 +9,13 @@ function LoadFiles() {
 
   const [result, setResult] = useState("");
 
-  const navigate = useNavigate();
-
   const fileLoader = () => {
     const formData = new FormData();
 
     formData.append("file", file, file.name);
     formData.append("file2", file2, file2.name);
-//axios.get con url para acceder a la variable del backend
-    axios.post('https://canopus-backend2.azurewebsites.net/xlsx/uploadXlsx', formData).then((res) => {
+
+    axios.post('http://localhost:3001/xlsx/uploadXlsx', formData).then((res) => {
       if(res.status === 201){
         setAlert("Los archivos se han subido y guardado exitosamente");
         console.log(res.data)
@@ -30,12 +26,7 @@ function LoadFiles() {
       setAlert("Sucedió un problema al subir los archivos. Favor de revisar de nuevo sus archivos y de volver a intentarlo");
     });
   }
-
-  const irBalanza = () => {
-    navigate('/GetBalanceFiles');
-  }
-
-  //asi se veria la pagina
+  
   return (
     <div>
       { alert && <p>{alert}</p> }
@@ -50,12 +41,13 @@ function LoadFiles() {
         setFile2(e.target.files[0]);
       })}/><br />
       <br />
-      <button onClick={(() => fileLoader())}>Subir archivos</button>
+      <button onClick={(() => fileLoader())}
+      variant="primary"
+      size="lg"
+      style={{ backgroundColor: "#AED6F1", width: '175px', height: '50px', fontSize:23}}
+      >Subir archivos</button>
       <br />
       {result && <p>{result.nameEnterprise}</p>}
-      
-      <button onClick={(() => irBalanza())}>Generar Balanza</button>
-
     </div>
   )
 }
