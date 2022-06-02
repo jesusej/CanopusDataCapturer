@@ -5,6 +5,7 @@ import LoadIncomeStatement from "./Routes/LoadIncomeStatement";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from "./Components/NavbarComp";
+import LoadTrialBalance from "./Routes/LoadTrialBalance";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<LoadFiles/>} />
             <Route path="/income-statement" element={<LoadIncomeStatement />} />
+            <Route path="/trial-balance" element={<LoadTrialBalance />} />
           </Routes>
         </Router>
       </main>
