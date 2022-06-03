@@ -12,6 +12,7 @@ export default class NavbarComp extends Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">Carga de Cuentas</Nav.Link>
+                        <Nav.Link href="/balance-sheet">Balanza General</Nav.Link>
                         <Nav.Link href="/trial-balance">Balance de Comprobación</Nav.Link>
                         <Nav.Link href="/income-statement">Estado de Resultados</Nav.Link>
                         {/*<NavDropdown title="Dropdown" id="basic-nav-dropdown">

@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import TrialBalance from '../Components/TrialBalance/TrialBalance';
 
@@ -5,7 +6,7 @@ function LoadTrialBalance() {
   const [trialBalance, setTrialBalance] = useState(null)
   
   const getTrialBalance = () => {
-    let trialBalanceDummy = {
+    /*let trialBalanceDummy = {
       accounts: [
         {
           code: "000-0100",
@@ -92,8 +93,12 @@ function LoadTrialBalance() {
           creditor: 1812783.64
         }
       }
-    }
-    setTrialBalance(trialBalanceDummy);
+    }*/
+    axios.get("http://localhost:3001/v1/reports/trial-balance/test").then((res) => {
+      setTrialBalance(res.data)
+    }).catch((e) => {
+      console.log(e)
+    })
   }
 
   return (
