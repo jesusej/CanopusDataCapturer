@@ -16,21 +16,20 @@ function TrialBalance({data}) {
           <th scope="col"  id='actual-balance-creditor'>Saldos actuales acreedor</th>
         </thead>
         <tbody>
-          {data.accounts.map((account) => {
+          {data.map((account) => {
             return(<TrialBalanceIterable data={account} /> )
           })}
-
+          {/*<tr>
+            <td></td>
+            <td headers='name'>Sumas iguales:</td>
+            <td headers='initial-balance-debtor'>{data.sums.initialBalanceSums.debtor}</td>
+            <td headers='initial-balance-creditor'>{data.sums.initialBalanceSums.creditor}</td>
+            <td headers='charge'>{data.sums.charge}</td>
+            <td headers='deposit'>{data.sums.deposit}</td>
+            <td headers='actual-balance-debtor'>{data.sums.actualBalanceSums.debtor}</td>
+            <td headers='actual-balance-creditor'>{data.sums.actualBalanceSums.creditor}</td>
+        </tr>*/}
         </tbody>
-        <tr>
-          <td></td>
-          <td scope="row" headers='name'>Sumas iguales:</td>
-          <td scope="row" headers='initial-balance-debtor'>{data.sums.initialBalanceSums.debtor}</td>
-          <td scope="row" headers='initial-balance-creditor'>{data.sums.initialBalanceSums.creditor}</td>
-          <td scope="row" headers='charge'>{data.sums.charge}</td>
-          <td scope="row" headers='deposit'>{data.sums.deposit}</td>
-          <td scope="row" headers='actual-balance-debtor'>{data.sums.actualBalanceSums.debtor}</td>
-          <td scope="row" headers='actual-balance-creditor'>{data.sums.actualBalanceSums.creditor}</td>
-        </tr>
       </table>
     </div>
   )
