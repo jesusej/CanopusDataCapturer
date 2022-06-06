@@ -5,9 +5,9 @@ import {Navbar, Nav, NavDropdown, Form, FormControl, Button} from 'react-bootstr
 export default class NavbarComp extends Component {
     render() {
         return (
-            <div>
+            <div style={{fontSize:27}}>
                 <Navbar bg="dark" variant={"dark"} expand="lg">
-                    <Navbar.Brand>Canopus Data Capturer</Navbar.Brand>
+                    <Navbar.Brand style={{fontSize:27}} >Canopus Data Capturer</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
