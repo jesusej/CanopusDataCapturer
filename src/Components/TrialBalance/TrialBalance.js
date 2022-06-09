@@ -1,19 +1,20 @@
 import React from 'react'
 import TrialBalanceIterable from './TrialBalanceIterable'
+import Table from 'react-bootstrap/Table'
 
 function TrialBalance({data}) {
   return (
     <div className='content'>
-      <table class= "table" style={{width:"1500px"}}>
+      <table class= "table" stripped size="mid">
         <thead>
-          <th scope="col"  id="code">Cuenta</th>
-          <th scope="col"  id='name'>Nombre</th>
-          <th scope="col"  id='initial-balance-debtor'>Saldos iniciales deudor</th>
-          <th scope="col"  id='initial-balance-creditor'>Saldos iniciales acreedor</th>
-          <th scope="col"  id='charge'>Cargos</th>
-          <th scope="col"  id='deposit'>Abonos</th>
-          <th scope="col"  id='actual-balance-debtor'>Saldos actuales deudor</th>
-          <th scope="col"  id='actual-balance-creditor'>Saldos actuales acreedor</th>
+          <th style={{width:"12%"}} id="code">Cuenta</th>
+          <th style={{width:"5%"}} id='name'>Nombre</th>
+          <th style={{width:"5%"}} id='initial-balance-debtor'>Saldos iniciales deudor</th>
+          <th style={{width:"5%"}} id='initial-balance-creditor'>Saldos iniciales acreedor</th>
+          <th style={{width:"5%"}} id='charge'>Cargos</th>
+          <th style={{width:"5%"}} id='deposit'>Abonos</th>
+          <th style={{width:"5%"}} id='actual-balance-debtor'>Saldos actuales deudor</th>
+          <th id='actual-balance-creditor'>Saldos actuales acreedor</th>
         </thead>
         <tbody>
           {data.map((account) => {

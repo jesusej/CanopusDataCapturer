@@ -28,7 +28,8 @@ function LoadFiles() {
   }
   
   return (
-    <div>
+    <div class="col text-center">
+      <div style={{ backgroundColor: "#CDEFFA" }}>
       { alert && <p>{alert}</p> }
       
       <label for="file">Cargue su Catálogo de Cuentas</label> <br />
@@ -44,10 +45,11 @@ function LoadFiles() {
       <button onClick={(() => fileLoader())}
       variant="primary"
       size="lg"
-      style={{ backgroundColor: "#AED6F1", width: '175px', height: '50px', fontSize:23}}
+      style={{ backgroundColor: "#AED6F1", width: '9%', height: '40%', fontSize:23}}
       >Subir archivos</button>
       <br />
       {result && <p>{result.nameEnterprise}</p>}
+      </div>
     </div>
   )
 }
