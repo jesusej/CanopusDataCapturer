@@ -3,12 +3,12 @@ import BalanceSheetIterative from './BalanceSheetIterative'
 
 function BalanceSheet({data}) {
   return (
-    <div>
+    <div className='content'>
       <div className='active'>
-        <table>
+        <table class= "table" stripped size="mid">
           <thead>
             <tr>
-              <th id='name'>{data.active.name}</th>
+              <th style={{width:"15%"}} id='name'>{data.active.name}</th>
               <th id='value'></th>
             </tr>
           </thead>
@@ -47,10 +47,10 @@ function BalanceSheet({data}) {
       </div>
 
       <div className='pasive'>
-        <table>
+        <table class= "table" stripped size="mid">
           <thead>
             <tr>
-              <th id='name'>{data.pasiveAndCapital.pasive.name}</th>
+              <th style={{width:"15%"}} id='name'>{data.pasiveAndCapital.pasive.name}</th>
               <th id='value'></th>
             </tr>
           </thead>
@@ -89,10 +89,10 @@ function BalanceSheet({data}) {
       </div>
 
       <div className='pasiveAndCapital.capital'>
-        <table>
+        <table class= "table" stripped size="mid">
           <thead>
             <tr>
-              <th id='name'>{data.pasiveAndCapital.capital.name}</th>
+              <th style={{width:"15%"}} id='name'>{data.pasiveAndCapital.capital.name}</th>
               <th id='value'></th>
             </tr>
           </thead>
