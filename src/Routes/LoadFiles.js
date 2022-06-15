@@ -42,10 +42,7 @@ function LoadFiles() {
         setFile2(e.target.files[0]);
       })}/><br />
       <br />
-      <button onClick={(() => fileLoader())}
-      variant="primary"
-      size="lg"
-      style={{ backgroundColor: "#AED6F1", width: '25%', height: '40%', fontSize:23}}
+      <button type="button" class="btn btn-primary" onClick={(() => fileLoader())}
       >Subir archivos</button>
       <br />
       {result && <p>{result.nameEnterprise}</p>}
