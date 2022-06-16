@@ -13,7 +13,7 @@ function IncomeStatement({data}) {
     <div className='content'>
       <div className='statement'>
         
-      <table class="table" stripped size="mid">
+      <Table responsive striped bordered hover>
         <thead>
           <th style={{width:"12%"}}id='description'>Descripción</th>
           <th style={{width:"5%"}} id='period'>Periodo</th>
@@ -36,7 +36,7 @@ function IncomeStatement({data}) {
           <td headers='accumulated-percentage'>{data.profit.accumulatedPercentage.toFixed(2)}</td>
         </tr>
         </tbody>
-      </table>
+      </Table>
 
       </div>
   </div>

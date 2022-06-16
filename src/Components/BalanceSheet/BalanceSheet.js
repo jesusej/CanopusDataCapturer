@@ -1,11 +1,12 @@
 import React from 'react'
 import BalanceSheetIterative from './BalanceSheetIterative'
+import Table from 'react-bootstrap/Table'
 
 function BalanceSheet({data}) {
   return (
     <div className='content'>
       <div className='active'>
-        <table class= "table" stripped size="mid">
+        <Table responsive striped bordered hover>
           <thead>
             <tr>
               <th style={{width:"15%"}} id='name'>{data.active.name}</th>
@@ -43,11 +44,11 @@ function BalanceSheet({data}) {
               <td>{data.active.sum}</td>
             </tr>
           </tbody>
-        </table>
+        </Table>
       </div>
 
       <div className='pasive'>
-        <table class= "table" stripped size="mid">
+        <Table responsive striped bordered hover>
           <thead>
             <tr>
               <th style={{width:"15%"}} id='name'>{data.pasiveAndCapital.pasive.name}</th>
@@ -85,11 +86,11 @@ function BalanceSheet({data}) {
               <td>{data.pasiveAndCapital.pasive.sum}</td>
             </tr>
           </tbody>
-        </table>
+        </Table>
       </div>
 
       <div className='pasiveAndCapital.capital'>
-        <table class= "table" stripped size="mid">
+        <Table responsive striped bordered hover>
           <thead>
             <tr>
               <th style={{width:"15%"}} id='name'>{data.pasiveAndCapital.capital.name}</th>
@@ -139,7 +140,7 @@ function BalanceSheet({data}) {
               <td>{data.pasiveAndCapital.sum.toFixed(2)}</td>
             </tr>
           </tbody>
-        </table>
+        </Table>
       </div>
     </div>
   )
