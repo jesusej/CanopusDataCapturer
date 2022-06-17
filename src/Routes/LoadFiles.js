@@ -45,7 +45,6 @@ function LoadFiles() {
       <button type="button" class="btn btn-primary" onClick={(() => fileLoader())}
       >Subir archivos</button>
       <br />
-      {result && <p>{result.nameEnterprise}</p>}
       </div>
     </div>
   )

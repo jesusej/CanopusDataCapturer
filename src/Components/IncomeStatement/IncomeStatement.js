@@ -30,10 +30,9 @@ function IncomeStatement({data}) {
         </tr>
         <tr>
           <td headers='description'>Utilidad (o Pérdida)</td>
-          <td headers='period' className={(data.profit.period < 0) && 'red'}>{data.profit.period.toFixed(2)}</td>
+          <td headers='period' className={(data.profit.period < 0) ? 'red' : ''}>{data.profit.period.toFixed(2)}</td>
           <td headers='period-percentage'>{data.profit.periodPercentage.toFixed(2)}</td>
-          <td headers='accumulated' className={(data.profit.period < 0) && 'red'}>{data.profit.accumulated.toFixed(2)}</td>
-          <td headers='accumulated-percentage'>{data.profit.accumulatedPercentage.toFixed(2)}</td>
+          <td headers='accumulated' className={(data.profit.accumulated < 0) ? 'red' : ''}>{data.profit.accumulated.toFixed(2)}</td>
         </tr>
         </tbody>
       </Table>
