@@ -6,7 +6,7 @@ function LoadBalanceSheet() {
   const [balanceSheet, setBalanceSheet] = useState(null)
 
   const getBalanceSheet = () => {
-    axios.get("http://localhost:3001/v1/reports/balance-sheet/test").then((res) => {
+    axios.get("https://canopus-backend2.azurewebsites.net/v1/reports/balance-sheet/test").then((res) => {
       setBalanceSheet(res.data);
       console.log(res.data);
     }).catch((e) => {
