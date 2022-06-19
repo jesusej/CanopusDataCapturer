@@ -15,7 +15,7 @@ function LoadFiles() {
     formData.append("file", file, file.name);
     formData.append("file2", file2, file2.name);
 
-    axios.post('http://localhost:3001/xlsx/uploadXlsx', formData).then((res) => {
+    axios.post('https://canopus-backend2.azurewebsites.net/xlsx/uploadXlsx', formData).then((res) => {
       if(res.status === 201){
         setAlert("Los archivos se han subido y guardado exitosamente");
         console.log(res.data)

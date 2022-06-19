@@ -11,7 +11,7 @@ function LoadIncomeStatement() {
 
   const getIncomeStatement = () => {
     if(initialDate && endDate){
-      const url = "http://localhost:3001/v1/reports/generate-income-statement/fdgd/dfgdg/user/test/false";
+      const url = "https://canopus-backend2.azurewebsites.net/v1/reports/generate-income-statement/fdgd/dfgdg/user/test/false";
 
       axios.get(url).then((res) => {
         setIncomeStatement(res.data);

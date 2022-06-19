@@ -94,7 +94,7 @@ function LoadTrialBalance() {
         }
       }
     }*/
-    axios.get("http://localhost:3001/v1/reports/trial-balance/test").then((res) => {
+    axios.get("https://canopus-backend2.azurewebsites.net/v1/reports/trial-balance/test").then((res) => {
       setTrialBalance(res.data)
     }).catch((e) => {
       console.log(e)
